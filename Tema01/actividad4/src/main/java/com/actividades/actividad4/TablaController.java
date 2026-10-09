@@ -6,19 +6,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TablaController {
+    // Pensé que al ser condiciones de validación tenía que ponerlo como constantes.
+    static final Integer MIN = 1;
+    static final Integer MAX = 20;
+    static final Integer POR_DEFECTO = 1;
 
-    private static final int MIN = 1;
-    private static final int MAX = 20;
-    private static final int POR_DEFECTO = 1;
-
-    @GetMapping(value = "/tabla", produces = "text/html;charset=UTF-8")
-    public String generarTabla(
-            @RequestParam(name = "filas", defaultValue = "1") String filas,
+    @GetMapping("/tabla")
+    public String generarTabla(@RequestParam(name = "filas", defaultValue = "1") String filas,
             @RequestParam(name = "columnas", defaultValue = "1") String columnas) {
 
+        // paso ambos valores recibidos en los valores "noramlizados" o validados para el ejercicio.
         int numFilas = normalizar(filas);
         int numColumnas = normalizar(columnas);
 
+        // Quería usar StringBuilder, el año pasado me parecía muchos más util que concatenar String.
         StringBuilder html = new StringBuilder();
         html.append("<!DOCTYPE html>\n");
         html.append("<html lang=\"es\">\n");
@@ -31,20 +32,20 @@ public class TablaController {
             .append(numColumnas).append("</h1>\n");
         html.append("  <table border=\"1\">\n");
 
-        // Encabezado con las columnas numeradas
+        // pongo las thead para identificar que es el encabezado de la tabla.
         html.append("    <thead>\n      <tr>\n");
-        for (int c = 1; c <= numColumnas; c++) {
-            html.append("        <th>Columna ").append(c).append("</th>\n");
+        for (int i = 1; i <= numColumnas; i++) {
+            html.append("        <th>Columna ").append(i).append("</th>\n"); // aquí enumero las columnas
         }
         html.append("      </tr>\n    </thead>\n");
 
-        // Cuerpo de la tabla: bucles anidados
         html.append("    <tbody>\n");
-        for (int f = 1; f <= numFilas; f++) {
+        // voy a hacer un bucle anidado como pide el ejercicio (creo) para crear las filas y celdas"
+        for (int i = 1; i <= numFilas; i++) {
             html.append("      <tr>\n");
-            for (int c = 1; c <= numColumnas; c++) {
-                html.append("        <td>Fila ").append(f)
-                    .append(", Columna ").append(c).append("</td>\n");
+            for (int j = 1; j <= numColumnas; j++) {
+                html.append("        <td>Fila ").append(i)
+                    .append(", Columna ").append(j).append("</td>\n");
             }
             html.append("      </tr>\n");
         }
@@ -57,7 +58,7 @@ public class TablaController {
         return html.toString();
     }
 
-    /**
+    /** La parte de validación (no se si lo hice bien):
      * Convierte el texto a entero y lo limita al rango [MIN, MAX].
      * - Parámetro ausente o vacío: llega como "1" gracias a defaultValue.
      * - No numérico: se usa el valor por defecto.
@@ -65,9 +66,9 @@ public class TablaController {
      */
     private int normalizar(String valor) {
         try {
-            int numero = Integer.parseInt(valor.trim());
+            int numero = Integer.parseInt(valor.trim()); // uso trim para quitar los espacios en blanco, por si acaso.
             return Math.max(MIN, Math.min(MAX, numero));
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e) { // aquí uso el try catch para capturar la excepción que pide el ejercicio.
             return POR_DEFECTO;
         }
     }
