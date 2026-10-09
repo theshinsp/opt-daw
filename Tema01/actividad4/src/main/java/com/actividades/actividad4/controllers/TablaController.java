@@ -1,4 +1,4 @@
-package com.actividades.actividad4;
+package com.actividades.actividad4.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,8 +16,8 @@ public class TablaController {
             @RequestParam(name = "columnas", defaultValue = "1") String columnas) {
 
         // paso ambos valores recibidos en los valores "noramlizados" o validados para el ejercicio.
-        int numFilas = normalizar(filas);
-        int numColumnas = normalizar(columnas);
+        Integer numFilas = normalizar(filas);
+        Integer numColumnas = normalizar(columnas);
 
         // Quería usar StringBuilder, el año pasado me parecía muchos más util que concatenar String.
         StringBuilder html = new StringBuilder();
@@ -64,9 +64,9 @@ public class TablaController {
      * - No numérico: se usa el valor por defecto.
      * - Fuera de rango: se ajusta al mínimo o al máximo.
      */
-    private int normalizar(String valor) {
+    private Integer normalizar(String valor) {
         try {
-            int numero = Integer.parseInt(valor.trim()); // uso trim para quitar los espacios en blanco, por si acaso.
+            Integer numero = Integer.parseInt(valor.trim()); // uso trim para quitar los espacios en blanco, por si acaso.
             return Math.max(MIN, Math.min(MAX, numero));
         } catch (NumberFormatException e) { // aquí uso el try catch para capturar la excepción que pide el ejercicio.
             return POR_DEFECTO;
