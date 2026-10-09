@@ -1,4 +1,4 @@
-package com.actividades.actividad4;
+package com.actividades.actividad4.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
