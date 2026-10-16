@@ -28,6 +28,7 @@ public class RegistroController {
     @PostMapping("/registro")
     @ResponseBody
     public String procesarRegistro(@ModelAttribute Formulario form) {
+        // Debería haber puesto que devuelve una Respuesta, y crear una clase Respuesta. Siempre que se devuelva algo se hace en JSON
         // Voy a modificar como lo tenía hecho para declarar en variables para poder llamarlos más fácil.
         // Si un campo no llega (null) lo trato como cadena vacía, luego ya cumpliré las reglas de validación.
         String nombre = form.getNombre() == null ? "" : form.getNombre().trim();
