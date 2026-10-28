@@ -64,21 +64,22 @@ public class ProductoController {
         return ResponseEntity.ok(new Respuesta("Hay " + total + " productos"));
     }
 
-    // 201 Created con el Producto creado (nombre «Producto N», precio fijo, id siguiente al último); si ya hay 5 productos,
-    // 409 Conflict con una Respuesta («El catálogo está lleno»)
+    // 201 Created con el Producto creado (nombre y precio vienen del JSON, id siguiente al último)
+    // 409 Conflict con una Respuesta («El catálogo está lleno») si ya hay 5 productos
     @PostMapping("/nuevo")
-    public ResponseEntity<?> crearProductoNuevo() {
+    public ResponseEntity<?> crearProductoNuevo(@RequestBody Producto nuevoProducto) {
         if (listaProductos.size() >= 5) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body(new Respuesta("El catálogo está lleno"));
         }
 
-        // Obtener el ID siguiente al último (si la lista está vacía empieza en 1)
         int siguienteId = listaProductos.isEmpty() ? 1 : listaProductos.getLast().getId() + 1;
 
-        // El nombre debe seguir el formato «Producto Nx» y precio fijo (ej. 50.0)
-        Producto nuevoProducto = new Producto(50.0, "Producto " + siguienteId,siguienteId );
+        // Asignamos el ID calculado dinámicamente al producto que viene por el Body
+        nuevoProducto.setId(siguienteId);
+
         listaProductos.add(nuevoProducto);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevoProducto);
     }
+
 }
