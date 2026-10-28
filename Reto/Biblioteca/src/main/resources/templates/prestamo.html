@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Préstamo de libros</title>
+</head>
+<body>
+    <h1>Solicitar préstamo</h1>
+
+    <form action="/prestamo" method="post">
+        <p>
+            <label for="libroId">ID del libro:</label>
+            <input type="number" id="libroId" name="libroId" required>
+        </p>
+        <p>
+            <label for="nombreSocio">Nombre del socio:</label>
+            <input type="text" id="nombreSocio" name="nombreSocio" required>
+        </p>
+        <p>
+            <label for="diasPrestamo">Días de préstamo:</label>
+            <input type="number" id="diasPrestamo" name="diasPrestamo" required>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="carnetPremium">
+                Carnet premium
+            </label>
+        </p>
+        <button type="submit">Pedir préstamo</button>
+    </form>
+
+    <p><a href="/">Volver al inicio</a></p>
+</body>
+</html>

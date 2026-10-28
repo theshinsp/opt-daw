@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Entradas</title>
+</head>
+<body>
+
+<h2>Reserva de Entradas</h2>
+<form action="" method="POST">
+    <p>
+        <label for="eventoId">Obra:</label><br>
+        <select name="eventoId" id="eventoId">
+            <option value="" disabled selected>Selecciona una obra...</option>
+            <option value="1">Obra Ejemplo 1</option>
+            <option value="2">Obra Ejemplo 2</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="nombreCliente">Nombre del cliente:</label><br>
+        <input type="text" name="nombreCliente" id="nombreCliente">
+    </p>
+
+    <p>
+        <label for="tipoEntrada">Zona:</label><br>
+        <select name="tipoEntrada" id="tipoEntrada">
+            <option value="General">General</option>
+            <option value="VIP">VIP</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="cantidad">Número de entradas:</label><br>
+        <input type="number" name="cantidad" id="cantidad" min="1">
+    </p>
+
+    <p>
+        <label for="codigoCupon">Cupón de descuento (Opcional):</label><br>
+        <input type="text" name="codigoCupon" id="codigoCupon">
+    </p>
+
+    <p>
+        <button type="submit">Reservar</button>
+    </p>
+
+</form>
+
+</body>
+</html>
