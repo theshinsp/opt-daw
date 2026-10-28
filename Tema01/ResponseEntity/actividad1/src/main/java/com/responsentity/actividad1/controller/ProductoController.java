@@ -20,8 +20,6 @@ public class ProductoController {
         listaProductos.add(new Producto(45.50, "Teclado Mecánico", 2));
         listaProductos.add(new Producto(25.00, "Ratón Inalámbrico", 3));
         listaProductos.add(new Producto(25.00, "Ratón", 4));
-        listaProductos.add(new Producto(180.00, "Monitor", 5));
-        listaProductos.add(new Producto(60.00, "Auriculares", 6));
     }
 
 
