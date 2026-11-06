@@ -6,18 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="reto3" />
+        <module name="arq-reto1" />
+        <module name="arq-act6" />
+        <module name="arq-reto2" />
+        <module name="arq-act5" />
         <module name="actividad4" />
+        <module name="biblioteca" />
         <module name="actividad3" />
-        <module name="reto1" />
+        <module name="actividad2" />
         <module name="actividad1" />
         <module name="actividad6" />
         <module name="actividad5" />
+        <module name="reto3" />
+        <module name="reto1" />
+        <module name="arq-act4" />
+        <module name="arq-act3" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="actividad2" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -27,6 +32,13 @@
       <module name="actividad4" options="-parameters" />
       <module name="actividad5" options="-parameters" />
       <module name="actividad6" options="-parameters" />
+      <module name="arq-act3" options="-parameters" />
+      <module name="arq-act4" options="-parameters" />
+      <module name="arq-act5" options="-parameters" />
+      <module name="arq-act6" options="-parameters" />
+      <module name="arq-reto1" options="-parameters" />
+      <module name="arq-reto2" options="-parameters" />
+      <module name="biblioteca" options="-parameters" />
       <module name="reto1" options="-parameters" />
       <module name="reto3" options="-parameters" />
     </option>

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Reto/Biblioteca/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Reto/arq-act3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Reto/arq-act4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Reto/arq-act5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Reto/arq-act6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Reto/arq-reto1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Reto/arq-reto2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Tema01/Ampliación/reto1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Tema01/Ampliación/reto3/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Tema01/ResponseEntity/actividad1/src/main/java" charset="UTF-8" />
@@ -9,5 +16,6 @@
     <file url="file://$PROJECT_DIR$/Tema01/actividad4/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Tema01/actividad5/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Tema01/actividad6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tema01_parte2/actividad2/actividad2/src/main/java" charset="UTF-8" />
   </component>
 </project>
