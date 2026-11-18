@@ -24,6 +24,15 @@
         <module name="arq-act4" />
         <module name="arq-act3" />
       </profile>
+      <profile name="Annotation profile for prueba" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
+        </processorPath>
+        <module name="prueba" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="actividad2 (1)" target="21" />
@@ -47,6 +56,7 @@
       <module name="arq-reto1" options="-parameters" />
       <module name="arq-reto2" options="-parameters" />
       <module name="biblioteca" options="-parameters" />
+      <module name="prueba" options="-parameters" />
       <module name="reto1" options="-parameters" />
       <module name="reto3" options="-parameters" />
     </option>
