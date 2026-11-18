@@ -15,20 +15,28 @@
         <module name="actividad3" />
         <module name="actividad2" />
         <module name="actividad1" />
+        <module name="actividad2Solution" />
         <module name="actividad6" />
         <module name="actividad5" />
         <module name="reto3" />
         <module name="reto1" />
+        <module name="actividad3 (1)" />
         <module name="arq-act4" />
         <module name="arq-act3" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="actividad2 (1)" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="actividad1" options="-parameters" />
       <module name="actividad2" options="-parameters" />
+      <module name="actividad2 (1)" options="-parameters" />
+      <module name="actividad2Solution" options="-parameters" />
       <module name="actividad3" options="-parameters" />
+      <module name="actividad3 (1)" options="-parameters" />
       <module name="actividad4" options="-parameters" />
       <module name="actividad5" options="-parameters" />
       <module name="actividad6" options="-parameters" />

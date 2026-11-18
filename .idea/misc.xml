@@ -21,7 +21,15 @@
         <option value="$PROJECT_DIR$/Reto/arq-act4/pom.xml" />
         <option value="$PROJECT_DIR$/Reto/arq-act5/pom.xml" />
         <option value="$PROJECT_DIR$/Tema01_parte2/actividad2/actividad2/pom.xml" />
+        <option value="$PROJECT_DIR$/Tema01_parte2/actividad2/actividad2_solucion/pom.xml" />
+        <option value="$PROJECT_DIR$/Tema01_parte2/actividad2Solution/pom.xml" />
+        <option value="$PROJECT_DIR$/Tema01_parte2/actividad3/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Tema01_parte2/actividad2/actividad2_solucion/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
